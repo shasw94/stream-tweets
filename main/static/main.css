@@ -1,0 +1,42 @@
+body{
+  margin-top: 10px;
+}
+
+.strip{
+  padding: 10px;
+  border-top: 1px solid silver;
+  border-top: 1px solid silver;
+  width: 600px;
+}
+
+.strip img{
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.light{
+  color: silver;
+}
+
+.summary{
+  margin-left: 60px;
+  margin-top: 5px;
+}
+
+.buttons{
+  float: right;
+}
+
+.buttons a{
+  color: silver;
+}
+
+.buttons a:hover{
+  color: #428bca;
+  text-decoration: none;
+}
+
+.buttons i.fa{
+  margin-left: .5em;
+}
