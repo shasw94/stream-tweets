@@ -1,5 +1,56 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1> Wordcloud </h1>
+<div class="container">
+    <div class="col-sm-12">
+        <form method="POST" action="">
+            {{ hash_form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Stream Hashtags</legend>
+                <div class="form-group">
+                    {{ hash_form.hashtag.label(class="form-control-label") }}
+
+                    {% if hash_form.hashtag.errors %}
+                        {{ hash_form.hashtag(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in hash_form.hashtag.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ hash_form.hashtag(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ hash_form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-12">
+        <form method="POST" action="">
+            {{ user_form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Stream User Tweets</legend>
+                <div class="form-group">
+                    {{ user_form.user_id.label(class="form-control-label") }}
+
+                    {% if user_form.user_id.errors %}
+                        {{ user_form.user_id(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in user_form.user_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ user_form.user_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ user_form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock content %}
 

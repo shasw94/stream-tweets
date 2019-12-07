@@ -1,6 +1,6 @@
 .idea
 venv
 __pycache__/
-credentials.py
+main/credentials.py
 .so
 
