@@ -61,6 +61,27 @@ After setting up python and setting up its virtual environment perform the follo
 Install dependent python libraries:<br>
 > `pip install -r requirements.txt`
 
+### Step 4: Setup your credentials
+
+1. Inside the project directory perfom the following to change directory to main
+ > `cd main` <br>
+ 
+2. Inside main directory create a new python file named **credentials.py**
+
+3. Paste the following in the file credentials.py
+
+```python
+CONSUMER_KEY = ''
+CONSUMER_SECRET_KEY = ''
+ACCESS_TOKEN = ''
+ACCESS_TOKEN_SECRET = ''
+```
+4. Add your respective twitter app credentials on the file.
+
+5. Save it
+
+Now you are all set to run the application
+
 ## Run the Web Application
 At this point, you should have a working Kafka broker running on your machine.
 The next steps are to running the web application.<br><br>

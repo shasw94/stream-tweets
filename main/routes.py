@@ -13,7 +13,7 @@ def get_kafka_client():
 
 
 @app.route("/", methods=['GET', 'POST'])
-def hello():
+def home():
     formHastag = HastagSearchForm()
     if formHastag.validate_on_submit():
         flash(f'Validated search string {formHastag.hashtag.data}', 'success')
