@@ -1,7 +1,4 @@
-//alert("hello");
-//document.getElementById("contents").innerHTML += "skdjflasf";
-
-
+// Set up event source as userstreamdata server (kafka consumer)
 var source = new EventSource('/tweets/userstreamdata');
 
 var data = [];
